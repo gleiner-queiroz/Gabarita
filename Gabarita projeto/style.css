@@ -1,0 +1,737 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* General Body Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f3ff; /* Cor de fundo mais clara e arroxeada */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main Header Styles - Adaptação da imagem */
+.main-header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #8a2be2; /* Azul violeta */
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav li a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #8a2be2; /* Azul violeta */
+    transition: width 0.3s ease;
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+    color: #8a2be2; /* Azul violeta */
+}
+
+.main-nav li a.active::after {
+    width: 100%;
+}
+
+/* Home Main Content Area */
+.home-main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.welcome-section h1 {
+    font-size: 2.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Overview Stats Section (used in home.html) */
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+    justify-content: center; /* Centraliza os cards */
+}
+
+.stat-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card .stat-value {
+    font-size: 3em;
+    font-weight: 700;
+    color: #8a2be2; /* Azul violeta */
+    margin-bottom: 5px;
+}
+
+.stat-card .stat-label {
+    font-size: 1.1em;
+    color: #666;
+    margin: 0;
+}
+
+/* Subject Selection Section (new for home.html) */
+.subject-selection {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.subject-selection h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+.subject-card {
+    background-color: #8a2be2; /* Azul violeta */
+    color: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none; /* Remove sublinhado do link */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.subject-card:hover {
+    background-color: #7a1fd1; /* Azul violeta mais escuro */
+    transform: translateY(-5px);
+}
+
+.subject-card i {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+}
+
+.subject-card h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.subject-card p {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+
+/* Questions Page Main (for index.html) */
+.questions-page-main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Questions Section (used in index.html) */
+.questions-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 50px;
+}
+
+.questions-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.filter-bar select,
+.filter-bar input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    flex: 1; /* Permite que os campos cresçam */
+    min-width: 180px; /* Garante um tamanho mínimo */
+}
+
+.filter-bar button {
+    padding: 12px 25px;
+    background-color: #8a2be2; /* Azul violeta */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.filter-bar button:hover {
+    background-color: #7a1fd1; /* Azul violeta mais escuro */
+}
+
+.questions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.question-item-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out;
+}
+
+.question-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.question-item-card .question-title {
+    font-size: 1.25em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.question-item-card .question-snippet {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limita a 3 linhas */
+    line-clamp: 3; /* Adicione esta linha para compatibilidade */
+    -webkit-box-orient: vertical;
+}
+
+.question-item-card .question-meta {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.question-item-card .question-meta span {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 8px;
+    color: #555;
+}
+
+.question-item-card .question-subject {
+    background-color: #d8eaff; /* Azul claro para matéria */
+    color: #3498db;
+    font-weight: 600;
+}
+
+.question-item-card .question-content {
+    background-color: #ffe0b2; /* Laranja claro para conteúdo */
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.question-item-card .view-question-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    background-color: #8a2be2; /* Azul violeta */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.question-item-card .view-question-btn:hover {
+    background-color: #7a1fd1; /* Azul violeta mais escuro */
+}
+
+.load-more-btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    padding: 15px 30px;
+    background-color: #6c5ce7; /* Um tom de roxo mais vibrante */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #5d4cd9;
+    transform: translateY(-2px);
+}
+
+/* Main Footer Styles - Adaptação da imagem */
+.main-footer {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-footer .logo {
+    font-size: 1.3em;
+}
+
+.main-footer .logo img {
+    width: 25px;
+    height: 25px;
+}
+
+.main-footer p {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0;
+}
+
+
+/* --- Existing Login Page Specific Styles --- */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0f2f7;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.login-container p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.signup-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- Existing Dashboard Specific Styles --- */
+/* Note: You might want to consider making dashboard-header and its nav use .main-header and .main-nav for consistency */
+.dashboard-header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.dashboard-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.dashboard-header nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-header nav li a:hover,
+.dashboard-header nav li a.active {
+    background-color: #34495e;
+}
+
+.dashboard-main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.user-info-section,
+.performance-section,
+.subject-performance-section,
+.additional-subjects-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-info-section h2,
+.performance-section h2,
+.subject-performance-section h2,
+.additional-subjects-section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.user-card {
+    text-align: center;
+}
+
+.user-card p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.user-card p span {
+    font-weight: bold;
+    color: #333;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.stat-card {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+    color: #34495e;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.stat-card .stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #3498db;
+    margin: 0;
+}
+
+.stat-card.correct .stat-number {
+    color: #2ecc71;
+}
+
+.stat-card.incorrect .stat-number {
+    color: #e74c3c;
+}
+
+.stat-card.percentage .stat-number {
+    color: #9b59b6;
+}
+
+#subject-performance-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subject-stat-item {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #eee;
+}
+
+.subject-stat-item span {
+    font-weight: bold;
+    color: #444;
+}
+
+.subject-stat-item .subject-accuracy {
+    color: #3498db;
+    font-weight: normal;
+}
+
+.additional-subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.additional-subject-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fefefe;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.additional-subject-card h3 {
+    color: #34495e;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.additional-subject-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.additional-subject-card .study-link {
+    display: inline-block;
+    background-color: #1abc9c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.additional-subject-card .study-link:hover {
+    background-color: #16a085;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .main-nav ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .overview-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar, .subject-grid { /* Applies to both */
+        grid-template-columns: 1fr;
+        flex-direction: column; /* For filter-bar */
+        align-items: stretch; /* For filter-bar */
+    }
+
+    .filter-bar button {
+        width: 100%;
+    }
+
+    .questions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    .dashboard-header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stats-grid,
+    .additional-subjects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-section h1 {
+        font-size: 2em;
+    }
+    .welcome-section p {
+        font-size: 1em;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .main-footer .footer-content {
+        gap: 5px;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões - ENEM Gabarita</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://via.placeholder.com/30/8a2be2/ffffff?text=G" alt="Gabarita Logo">
+                <span>Gabarita</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="index.html" class="active">Questões</a></li>
+                    <li><a href="dashboard.html">Estatísticas</a></li>
+                    <li><a href="dashboard.html">Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="questions-page-main">
+        <section class="questions-section" id="questions-section">
+            <h2>Todas as Questões</h2>
+            <div class="filter-bar">
+                <select id="subject-filter-questions">
+                    <option value="">Filtrar por Matéria</option>
+                    <option value="matematica">Matemática</option>
+                    <option value="portugues">Português</option>
+                    <option value="historia">História</option>
+                    <option value="ciencias">Ciências da Natureza</option>
+                    <option value="humanas">Ciências Humanas e suas Tecnologias</option>
+                    <option value="linguagens">Linguagens, Códigos e suas Tecnologias</option>
+                    <option value="natureza">Ciências da Natureza e suas Tecnologias</option>
+                    <option value="matematica">Matemática e suas Tecnologias</option>
+                </select>
+                <select id="enem-year-filter-questions">
+                    <option value="">Filtrar por Ano ENEM</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    </select>
+                <input type="text" id="search-questions" placeholder="Buscar por palavra-chave...">
+                <button type="button">Buscar</button>
+            </div>
+
+            <div class="questions-grid">
+                <div class="question-item-card">
+                    <h3 class="question-title">Questão de Interpretação de Texto - ENEM 2023</h3>
+                    <p class="question-snippet">"Em um trecho de um poema de Carlos Drummond de Andrade, o eu lírico reflete sobre a passagem do tempo e a efemeridade da vida..."</p>
+                    <div class="question-meta">
+                        <span class="question-subject">Português</span>
+                        <span class="question-content">Interpretação de Texto</span>
+                    </div>
+                    <button class="view-question-btn">Ver Questão</button>
+                </div>
+
+                <div class="question-item-card">
+                    <h3 class="question-title">Problema de Geometria Plana - ENEM 2022</h3>
+                    <p class="question-snippet">"Um terreno retangular de 20m de largura por 30m de comprimento será dividido em três partes iguais para cultivo..."</p>
+                    <div class="question-meta">
+                        <span class="question-subject">Matemática</span>
+                        <span class="question-content">Geometria Plana</span>
+                    </div>
+                    <button class="view-question-btn">Ver Questão</button>
+                </div>
+
+                <div class="question-item-card">
+                    <h3 class="question-title">Questão de Biologia: Ecologia - ENEM 2021</h3>
+                    <p class="question-snippet">"Analise o fluxo de energia em um ecossistema aquático, considerando a relação entre produtores e consumidores..."</p>
+                    <div class="question-meta">
+                        <span class="question-subject">Ciências da Natureza</span>
+                        <span class="question-content">Ecologia</span>
+                    </div>
+                    <button class="view-question-btn">Ver Questão</button>
+                </div>
+
+                <div class="question-item-card">
+                    <h3 class="question-title">Questão de História do Brasil - ENEM 2020</h3>
+                    <p class="question-snippet">"A vinda da família real portuguesa para o Brasil em 1808 trouxe diversas mudanças socioeconômicas para a colônia..."</p>
+                    <div class="question-meta">
+                        <span class="question-subject">História</span>
+                        <span class="question-content">Período Joanino</span>
+                    </div>
+                    <button class="view-question-btn">Ver Questão</button>
+                </div>
+                </div>
+            <button class="load-more-btn">Carregar Mais Questões</button>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="logo">
+                <img src="https://via.placeholder.com/25/8a2be2/ffffff?text=G" alt="Gabarita Logo">
+                <span>Gabarita</span>
+            </div>
+            <p>&copy; 2024 Gabarita. Sua jornada de estudos começa aqui!</p>
+        </div>
+    </footer>
+
+    </body>
+</html>
